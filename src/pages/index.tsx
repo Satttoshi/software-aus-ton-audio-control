@@ -1,14 +1,10 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
+import localFont from "next/font/local"
 import ControlPanel from '../components/ControlPanel'
 
-
-const inter = Inter({ subsets: ['latin'] })
+const karla = localFont({src: '../../public/fonts/Karla-Regular.woff2'})
 
 export default function Home() {
-
-
-
 
   return (
     <>
@@ -18,7 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={karla.className}>
         <ControlPanel />
       </main>
     </>
