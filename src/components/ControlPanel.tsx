@@ -2,6 +2,7 @@ import {useStore} from "~/store/useStore";
 import ButtonAtmo from "~/components/ButtonAtmo";
 import ButtonFx from "~/components/ButtonFx";
 import styled from "styled-components";
+import ArrowRight from "~/components/ArrowRight";
 
 export default function ControlPanel() {
     const responseMessage = useStore(state => state.responseMessage);
@@ -11,6 +12,7 @@ export default function ControlPanel() {
             <h3>SoftwareAusTon</h3>
             <StyledButtonContainer>
                 <ButtonAtmo groupId={0} label="Start Atmo"/>
+                <ArrowRight/>
                 <ButtonAtmo groupId={1} label="Beichtstuhl geöffnet"/>
                 <ButtonAtmo groupId={2} label="Geheimraum geöffnet"/>
                 <ButtonAtmo groupId={3} label="Strom angeschaltet"/>
@@ -46,4 +48,35 @@ export default function ControlPanel() {
 }
 
 const StyledButtonContainer = styled.section`
+
+  display: flex;
+  gap: 10px;
+
+  button {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+
+    background-color: var(--color4);
+    color: var(--black);
+
+    font-weight: 600;
+    font-size: 1rem;
+    width: 120px;
+    height: 60px;
+
+    box-shadow: 0 5px 0 rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      background-color: var(--color3);
+    }
+    
+    &:active {
+      box-shadow: 0 3px 0 rgba(255, 255, 255, 0.3);
+      transform: translateY(2px);
+    }
+
+  }
+
 `;
