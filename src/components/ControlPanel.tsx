@@ -7,7 +7,7 @@ export default function ControlPanel() {
     const responseMessage = useStore(state => state.responseMessage);
 
     return (
-        <div>
+        <>
             <h3>SoftwareAusTon</h3>
             <StyledButtonContainer>
                 <ButtonAtmo groupId={0} label="Start Atmo"/>
@@ -41,19 +41,9 @@ export default function ControlPanel() {
                 <ButtonFx fxId={13} label="Donner 2"/>
             </StyledButtonContainer>
             <div>Response: {responseMessage}</div>
-        </div>
+        </>
     );
 }
 
-const StyledButtonContainer = styled.div`
-  display: flex;
-  border: 1px solid black;
-  width: 1200px;
-
-  button {
-    font-weight: 600;
-    width: 160px;
-    height: 56px;
-
-  }
+const StyledButtonContainer = styled.section`
 `;
