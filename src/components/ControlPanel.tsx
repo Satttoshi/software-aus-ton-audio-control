@@ -12,7 +12,7 @@ export default function ControlPanel() {
         <>
             <h1>Software aus Ton</h1>
             <StyledLine/>
-            <h2>Atmo</h2>
+            <h2>Hintergrundmusik (Atmosphäre)</h2>
             <StyledButtonContainer>
                 <ButtonAtmo groupId={0} label="Start Atmo"/>
                 <ArrowRight/>
@@ -22,16 +22,9 @@ export default function ControlPanel() {
                 <ArrowRight/>
                 <ButtonAtmo groupId={3} label="Strom angeschaltet"/>
             </StyledButtonContainer>
-            <StyledGap/>
-            <StyledButtonContainer>
-                <ButtonAtmo groupId={4} label="Gewonnen"/>
-                <ButtonAtmo groupId={5} label="Gewonnen English"/>
-                <ButtonAtmo groupId={6} label="Verloren"/>
-                <ButtonAtmo groupId={7} label="Verloren English"/>
-                <ButtonAtmo groupId={-1} label="Stop Atmo"/>
-            </StyledButtonContainer>
+
             <StyledLine/>
-            <h2>Effekte</h2>
+            <h2>Soundeffekte</h2>
             <StyledButtonContainer>
                 <ButtonFx fxId={140} label="Hinweiston"/>
                 <ButtonFx fxId={3} label="Fuchs"/>
@@ -48,6 +41,15 @@ export default function ControlPanel() {
                 <ButtonFx fxId={13} label="Lachen"/>
                 <ButtonFx fxId={15} label="Donner 1"/>
                 <ButtonFx fxId={16} label="Donner 2"/>
+            </StyledButtonContainer>
+            <StyledLine/>
+            <h2>Spielende</h2>
+            <StyledButtonContainer>
+                <ButtonAtmo groupId={4} label="Gewonnen"/>
+                <ButtonAtmo groupId={5} label="Gewonnen English"/>
+                <ButtonAtmo groupId={6} label="Verloren"/>
+                <ButtonAtmo groupId={7} label="Verloren English"/>
+                <ButtonAtmo groupId={-1} label="Stop Atmo"/>
             </StyledButtonContainer>
             <StyledLine/>
             <div>{responseMessageGroup}</div>
@@ -104,8 +106,4 @@ const StyledLine = styled.div`
   border: 1px solid var(--white);
   margin: 2rem 0 1rem 0;
   width: 700px;
-`;
-
-const StyledGap = styled.div`
-  margin: 1.5rem 0;
 `;
