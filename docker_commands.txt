@@ -1,0 +1,2 @@
+docker build -t software-aus-ton-gui .
+docker run -e "ITX_IP=127.0.0.1" -p 8000:3000 image_name

@@ -1,5 +1,5 @@
 # Base the Docker image on the official Node.js image.
-FROM node:14-alpine
+FROM node:18
 
 # Create a directory for the application
 WORKDIR /app
@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Start the app
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "start" ]
