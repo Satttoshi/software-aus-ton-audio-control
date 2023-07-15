@@ -19,3 +19,11 @@ This is a Next.js application designed to remotely control a 3D audio system. It
 3. move .tar file with USB-Stick or something to offline server ITX
 4. if docker desktop is installed then `docker load < software-aus-ton-gui.tar` else install first
 5. finished, the server has the docker image installed
+
+#### When there is no CPU Virtualisation
+
+Autorun app with node.js instead
+
+1. install node.js (current version of this readme is v18.16.1-x64)
+2. create bat file with content: `cd C:\HaT\software-aus-ton-audio-control && npm run start`
+3. put it into the `shell:startup` folder
