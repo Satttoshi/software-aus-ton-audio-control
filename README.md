@@ -11,3 +11,11 @@ This is a Next.js application designed to remotely control a 3D audio system. It
 3. copy paste `docker_start.bat` file into the startup folder
 4. open `docker_start_bat` with text editor and set the `ITX_IP=<setip>` to the ip-address where the audio software is located at
 5. finished, the server will start on computer startup now
+
+#### How to move docker image to ITX
+
+1. build container on repository dir with `docker build -t software-aus-ton-gui .`
+2. save docker image as .tar file with `docker save software-aus-ton-gui > software-aus-ton-gui.tar`
+3. move .tar file with USB-Stick or something to offline server ITX
+4. if docker desktop is installed then `docker load < software-aus-ton-gui.tar` else install first
+5. finished, the server has the docker image installed
