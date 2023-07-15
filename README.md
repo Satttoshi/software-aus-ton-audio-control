@@ -27,3 +27,6 @@ Autorun app with node.js instead
 1. install node.js (current version of this readme is v18.16.1-x64)
 2. create bat file with content: `cd C:\HaT\software-aus-ton-audio-control && npm run start`
 3. put it into the `shell:startup` folder
+4. move .next folder or whole repository `into C:\HaT\`
+5. make sure to include package.json file
+6. run in that dir in cmd `npm i --omit=dev`
