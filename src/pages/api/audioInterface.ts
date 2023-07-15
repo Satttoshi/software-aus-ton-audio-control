@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import net from 'net';
 
-const ip = "127.0.0.1"
+const ip = process.env.ITX_IP;
 
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
