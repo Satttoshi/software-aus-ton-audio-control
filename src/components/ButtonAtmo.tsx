@@ -12,7 +12,7 @@ export default function ButtonAtmo({groupId, label}: Props) {
 
     if (groupId === -1) {
         return (
-            <button style={{background: "var(--color3)", marginLeft: "40px"}} onClick={() => handlePlayGroup(groupId)}>
+            <button style={{background: "var(--color3)", marginLeft: "40px"}} onClick={() => handlePlayGroup(groupId, label)}>
                 Stop Atmo
             </button>
         )
@@ -20,7 +20,7 @@ export default function ButtonAtmo({groupId, label}: Props) {
 
     return (
 
-        <button className={active ? "active" : ""} onClick={() => handlePlayGroup(groupId)}>{label}</button>
+        <button className={active ? "active" : ""} onClick={() => handlePlayGroup(groupId, label)}>{label}</button>
 
     )
 }

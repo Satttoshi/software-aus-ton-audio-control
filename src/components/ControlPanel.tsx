@@ -5,7 +5,8 @@ import styled from "styled-components";
 import ArrowRight from "~/components/ArrowRight";
 
 export default function ControlPanel() {
-    const responseMessage = useStore(state => state.responseMessage);
+    const responseMessageGroup = useStore(state => state.responseMessageGroup);
+    const responseMessageFx = useStore(state => state.responseMessageFx);
 
     return (
         <>
@@ -32,23 +33,25 @@ export default function ControlPanel() {
             <StyledLine/>
             <h2>Effekte</h2>
             <StyledButtonContainer>
-                <ButtonFx fxId={0} label="Fuchs"/>
-                <ButtonFx fxId={1} label="Spieluhr"/>
-                <ButtonFx fxId={2} label="Falke"/>
-                <ButtonFx fxId={3} label="Klavier"/>
-                <ButtonFx fxId={4} label="Baby"/>
-                <ButtonFx fxId={5} label="Lachen"/>
-                <ButtonFx fxId={6} label="Klopfen"/>
-                <ButtonFx fxId={7} label="Pfeifen"/>
-                <ButtonFx fxId={8} label="Blutkiste"/>
+                <ButtonFx fxId={140} label="Hinweiston"/>
+                <ButtonFx fxId={3} label="Fuchs"/>
+                <ButtonFx fxId={8} label="Spieluhr"/>
+                <ButtonFx fxId={4} label="Falke"/>
+                <ButtonFx fxId={7} label="Klavier"/>
+                <ButtonFx fxId={0} label="Baby"/>
+                <ButtonFx fxId={6} label="Lachen"/>
+                <ButtonFx fxId={5} label="Klopfen"/>
+                <ButtonFx fxId={19} label="Pfeifen"/>
+                <ButtonFx fxId={12} label="Blutkiste"/>
                 <ButtonFx fxId={9} label="Atmen"/>
-                <ButtonFx fxId={10} label="Klirren"/>
-                <ButtonFx fxId={11} label="Lachen"/>
-                <ButtonFx fxId={12} label="Donner 1"/>
-                <ButtonFx fxId={13} label="Donner 2"/>
+                <ButtonFx fxId={11} label="Klirren"/>
+                <ButtonFx fxId={13} label="Lachen"/>
+                <ButtonFx fxId={15} label="Donner 1"/>
+                <ButtonFx fxId={16} label="Donner 2"/>
             </StyledButtonContainer>
             <StyledLine/>
-            <div>Response: {responseMessage}</div>
+            <div>{responseMessageGroup}</div>
+            <div>{responseMessageFx}</div>
         </>
     );
 }
@@ -99,8 +102,8 @@ const StyledButtonContainer = styled.section`
 
 const StyledLine = styled.div`
   border: 1px solid var(--white);
-  margin: 2rem 0;
-  width: 500px;
+  margin: 2rem 0 1rem 0;
+  width: 700px;
 `;
 
 const StyledGap = styled.div`

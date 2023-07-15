@@ -9,6 +9,6 @@ export default function ButtonFx({fxId, label}: Props) {
     const handlePlayFx = useStore(state => state.handlePlayFx);
 
     return (
-        <button onClick={() => handlePlayFx(fxId)}>{label}</button>
+        <button onClick={() => handlePlayFx(fxId, label)}>{label}</button>
     )
 }
