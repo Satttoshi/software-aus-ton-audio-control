@@ -21,7 +21,7 @@ export const useStore = create<Store>((set) => ({
             const response = await fetch('/api/audioInterface', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ip: '127.0.0.1', group_id, label}),
+                body: JSON.stringify({group_id, label}),
             });
             const message = await response.text();
             set({responseMessageGroup: message});
@@ -33,7 +33,7 @@ export const useStore = create<Store>((set) => ({
             const response = await fetch('/api/audioInterface', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ip: '127.0.0.1', fx_id, label}),
+                body: JSON.stringify({fx_id, label}),
             });
             const message = await response.text();
             set({responseMessageFx: message});

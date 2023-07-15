@@ -27,7 +27,7 @@ export default function ControlPanel() {
                 <ButtonAtmo groupId={4} label="Gewonnen"/>
                 <ButtonAtmo groupId={5} label="Gewonnen English"/>
                 <ButtonAtmo groupId={6} label="Verloren"/>
-                <ButtonAtmo groupId={7} label="Gewonnen English"/>
+                <ButtonAtmo groupId={7} label="Verloren English"/>
                 <ButtonAtmo groupId={-1} label="Stop Atmo"/>
             </StyledButtonContainer>
             <StyledLine/>

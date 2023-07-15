@@ -1,9 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import net from 'net';
 
+const ip = "127.0.0.1"
+
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
-    const { ip, group_id, fx_id, label } = req.body;
+    const { group_id, fx_id, label } = req.body;
 
     const client = net.connect({ port: 6881, host: ip }, function () {
       if (group_id) {
