@@ -3,6 +3,7 @@ import {create} from 'zustand';
 
 type Store = {
     responseMessage: string;
+    activeGroup: number;
     handlePlayGroup: (id: number) => Promise<void>;
     handlePlayFx: (id: number) => Promise<void>;
 }
@@ -11,6 +12,7 @@ export const useStore = create<Store>((set) => ({
 // STORE START
 
         responseMessage: '',
+        activeGroup: -1,
 
         handlePlayGroup: async (id: number) => {
             const group_id = id.toString();
@@ -21,6 +23,7 @@ export const useStore = create<Store>((set) => ({
             });
             const message = await response.text();
             set({responseMessage: message});
+            set ({activeGroup: id});
         },
 
         handlePlayFx: async(id: number) => {

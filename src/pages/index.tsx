@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import ControlPanel from '../components/ControlPanel'
+import styled from "styled-components";
 
 
 export default function Home() {
@@ -13,9 +14,15 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <main>
+            <StyledMain>
                 <ControlPanel/>
-            </main>
+            </StyledMain>
         </>
     )
 }
+
+const StyledMain = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
