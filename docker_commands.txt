@@ -1,4 +1,4 @@
 docker build -t software-aus-ton-gui .
-docker run -e "ITX_IP=172.27.144.1" --name audio-gui -p 8000:3000 software-aus-ton-gui
+docker run --rm -e "ITX_IP=172.27.144.1" --name audio-gui -p 8000:3000 software-aus-ton-gui
 
 

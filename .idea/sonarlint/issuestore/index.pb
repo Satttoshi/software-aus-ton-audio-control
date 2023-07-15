@@ -12,3 +12,8 @@ B
 src/pages/_app.tsx,2\e\2eefa41a18ed6ea3f58b3748f9e5559a28e77646
 M
 src/components/ArrowRight.tsx,c\e\cec589d2c04e18df8cda80ee2d3e5e2da11f5a5f
+E
+src/store/useStore.ts,b\0\b041b30cf5f72756b887e4870cedff6a3e94ef5f
+:
+
+.env.local,1\f\1fa30fea3e9ae270a3c38a6113a3689d8987d108
